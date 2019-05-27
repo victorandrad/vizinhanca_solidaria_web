@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "vizinhanca-solidaria-c8c37",
+  "private_key_id": "9df704cd31268cb1b1a9a88a5f746af5aa29b20f",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCYuF3R8RB/CSJj\n0UdIqJwVLN3jS5zv7+ZKrxzFHjTf7YuKjiYevcerzVz1KIXczhDuvKzrZQIjYAGw\nbsplqaNrsjBN5+F2WfXP0KdZk1YLMMl5cG4YlFiZNVFqblR30zbsfbANhFXq5SnJ\nn+ZJ0uC/p5V0a/TAtnBFJ9iX10OS4TNydrOwLgt2rG4K7eKKlaoNot0Q4x5GxT8i\nu/KkMtOrkgKhafc+L1zthfZ34HVAeNq/DVQicQOvRLjNo+/3cxV7D33+EcKbTrz2\n9dq41gNPH9JDnqj/4dgGr8RTwhl+F69LG41ZC5FitTDF7q2f7YbJxE7rp2ryLpoI\n8nEKztS3AgMBAAECggEAPiwQRb+Vr6HQVkKEepfpstUpH7dQlH1di1nupHC/pcnW\n3Pkxm6I2/0IDbeqpVFKvogE9hDcCv9P93A2+Z9S/qsBH2e9kYgINiCSxfE324Wdj\nHgUfTPJXf0etdV6lFILwASbJ3Tbao13XvTVTUwp+ZIec2GB6q1maKw0lp+sCn3Bd\ntcR/y4nvCkkmTG2tpuYYZ+uE5/rE8XT5IDzG1LW6MvZTEb/bzYlQXb/m5+/PbaQv\nsJQmzTUvwDtrw65bbs26twVDGT7fItUYfyzXRADX2qQFkL5GQe1Ffa9lcL5MRWdu\nZC03t2uZ6gJ/z7utEI8jTkCkqcZM4nvF/RMxb9CGAQKBgQDJCm0gCJ5JpOVei8/w\nO7RrDnsHfxdtVkN2pG4v6BpFn5QaCusGhmtbZog20OqNQjmoqNehzuMfhb/PhF32\ns+Kz0+WVTCTbLDAE3LrtQ6qWzK1QtAV1eEiZWsL4wpp/NIYja4jRuoyw/6SbkgTb\nLdZPvEzlMTqVB0uDLDSPjgRR4QKBgQDCeEooHHPx1OxIyLF2Xva++jSHxsOpJWCY\n7Y0sunCwC64EwjjNvVH1VMlaQGtbizkoNy4uDZYOotlPipO94K8SUAob/HEpICsf\nYfN6Ovu3x37c3I2yVoOahuEFSlg4sBYnbzx+AwWA6x7rdiAL5kR3oliahoF/UqmX\nH2+szNWplwKBgQCxKzIOB+pOpjXIw1els0gFDIbZjWP85AeiF7hPGbGFZ+Nhq/uB\nDZawvsQN4sDBafpcKyeUnjlD/1+RJmqUTeTca0Go96iHSgKrVkaZb4d3S7r1IyCo\nbC82jmjCRuVWctg/gLXbdhYkqbXLr7v92ABE1oHBfUfOK9adK6jKVfJyoQKBgQCj\nsVdSjii2jjDaTzy509PFC50+EPxPm6vE7migFsuWFC7FyKrB27NqW5UliAYWR4m0\nJUaU81C1PzTGtHIKKV+UfZUU25hxMqe5wdyNraqGlsFdrbUEQbiDUTeGGX9LMEVl\nqkd0Fp0CWGdtccAl5A0L2rbUU5Ybk3w3PfnlrYHIPwKBgDgu205f6zsdOE54xJCN\nNAUl5vkR+2jfQG9deHbXP+RfzsGlosOY/GpSA6zPPMTJfta4PNR8yf9GT77WQAYf\nXSzy9ZA9xIsr4hX1a2+LduxdKNCMcKBAO45stNVSeuWB+J82pu9EvukdG2/VJQJS\n1tviG1C+ygHLkIwVoHeEIYrW\n-----END PRIVATE KEY-----\n",
+  "client_email": "vizinhanca-solidaria-c8c37@appspot.gserviceaccount.com",
+  "client_id": "116266984720361267670",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/vizinhanca-solidaria-c8c37%40appspot.gserviceaccount.com"
+}
