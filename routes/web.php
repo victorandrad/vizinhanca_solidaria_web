@@ -17,9 +17,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('logout', 'Auth\LoginController@logout');
 Route::post('login', 'Auth\LoginController@index')->name('login');
 
-//Route::get('/novo-morador', 'FirebaseController@index');
-//Route::post('/novo-morador', 'FirebaseController@add');
+Route::get('/novo-morador', 'NovoMoradorController@index');
+Route::post('/novo-morador', 'NovoMoradorController@add');
 
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
+

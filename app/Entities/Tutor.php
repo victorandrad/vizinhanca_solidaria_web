@@ -6,11 +6,12 @@ use App\Mail\RecuperaSenhaMail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Mail;
+use Prettus\Repository\Traits\TransformableTrait;
 
 class Tutor extends Authenticatable
 {
 
-    use Notifiable;
+    use Notifiable, TransformableTrait;
 
     const CREATED_AT = 'data_criacao';
     const UPDATED_AT = 'data_edicao';
@@ -51,6 +52,12 @@ class Tutor extends Authenticatable
     public function getEmailForPasswordReset()
     {
         return $this->email;
+    }
+
+    public function getNameUser(){
+        dd($this->nome);
+
+        return $this->nome;
     }
 
 }
