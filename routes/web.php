@@ -20,7 +20,9 @@ Route::post('login', 'Auth\LoginController@index')->name('login');
 Route::get('/novo-morador', 'NovoMoradorController@index');
 Route::post('/novo-morador', 'NovoMoradorController@add');
 
+Route::get('/moradores', 'MoradoresController@index');
+Route::post('/moradores', 'MoradoresController@deleteUser');
+
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
-

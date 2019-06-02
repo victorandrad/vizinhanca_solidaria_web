@@ -63,7 +63,7 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="/">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span></a>
         </li>
@@ -86,7 +86,7 @@
 
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
-            <a class="nav-link collapsed" href="#" aria-expanded="true">
+            <a class="nav-link collapsed" href="/moradores" aria-expanded="true">
                 <i class="fas fa-fw fa-user"></i>
                 <span>Ver todos</span>
             </a>
