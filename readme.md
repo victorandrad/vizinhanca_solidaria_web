@@ -10,4 +10,4 @@ Este projeto versão Web tem como objetivo simplificar as tarefas do tutor do ba
 - Listagem de todas as ocorrências do bairro
 - Monitoramento de ocorrências em tempo real
 
-Este projetos tem a tecnologia do Firebase ingrado para fazer o monitoramento em tempo real
+Este projeto tem a tecnologia do Firebase ingrado para fazer o monitoramento em tempo real
