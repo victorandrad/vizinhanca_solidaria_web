@@ -56,8 +56,6 @@ class Usuario extends Authenticatable
 
     public function getNameUser()
     {
-        dd($this->nome);
-
         return $this->nome;
     }
 

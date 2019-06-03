@@ -13,13 +13,8 @@ $('document').ready(async function () {
                 var $td_data_hora = document.createElement('td');
                 var $td_acao = document.createElement('td');
 
-                var datas = data.val().data_hora.split(' ')[0];
-                var dia = datas.split('/')[0];
-                var mes = datas.split('/')[1];
-                var ano = datas.split('/')[2];
-
                 $td_remetente.innerHTML = data.val().remetente;
-                $td_data_hora.innerHTML = moment(ano + '-' + mes + '-' + dia).format('DD/MM/YYYY');
+                $td_data_hora.innerHTML = data.val().data_hora;
                 $td_acao.innerHTML = '<form method="POST"\n' +
                     'action="/detalhe-monitora">\n' +
                     '<input type="hidden" value="' + $('meta[name="csrf-token"]').attr('content') + '" name="_token">' +

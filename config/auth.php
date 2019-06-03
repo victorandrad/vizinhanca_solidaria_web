@@ -109,12 +109,6 @@ return [
             'table' => 'recupera_senha',
             'expire' => 60,
         ],
-
-        'guarda_password' => [
-            'provider' => 'guardas',
-            'table' => 'recupera_senha',
-            'expire' => 60,
-        ],
     ],
 
 ];
