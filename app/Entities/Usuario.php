@@ -8,7 +8,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Mail;
 use Prettus\Repository\Traits\TransformableTrait;
 
-class Tutor extends Authenticatable
+class Usuario extends Authenticatable
 {
 
     use Notifiable, TransformableTrait;
@@ -16,7 +16,7 @@ class Tutor extends Authenticatable
     const CREATED_AT = 'data_criacao';
     const UPDATED_AT = 'data_edicao';
 
-    protected $table = 'tutor';
+    protected $table = 'usuario';
 
     protected $primaryKey = 'id';
 
@@ -54,7 +54,8 @@ class Tutor extends Authenticatable
         return $this->email;
     }
 
-    public function getNameUser(){
+    public function getNameUser()
+    {
         dd($this->nome);
 
         return $this->nome;

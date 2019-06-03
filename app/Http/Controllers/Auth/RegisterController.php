@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Entities\Tutor;
+use App\Entities\Guarda;
+use App\Entities\Usuario;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
@@ -63,7 +64,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return Tutor::create([
+        return Usuario::create([
             'nome' => $data['name'],
             'email' => $data['email'],
             'senha' => Hash::make($data['password']),

@@ -30,7 +30,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
             Vizinhança Solidária
         </a>
 
@@ -47,28 +47,34 @@
         <!-- Divider -->
         <hr class="sidebar-divider">
 
+
+    @if(Auth::user()->tipo == 'admin' || Auth::user()->tipo == 'tutor' || Auth::user()->tipo == 'guarda')
         <!-- Heading -->
-        <div class="sidebar-heading">
-            Moradores
-        </div>
+            <div class="sidebar-heading">
+                Moradores
+            </div>
+    @endif
 
+    @if(Auth::user()->tipo == 'admin' || Auth::user()->tipo == 'tutor')
         <!-- Nav Item - Pages Collapse Menu -->
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="/novo-morador" aria-expanded="true">
-                <i class="fas fa-fw fa-user-edit"></i>
-                <span>Adicionar novo</span>
-            </a>
-        </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="/novo-morador" aria-expanded="true">
+                    <i class="fas fa-fw fa-user-edit"></i>
+                    <span>Adicionar novo</span>
+                </a>
+            </li>
+    @endif
 
+    @if(Auth::user()->tipo == 'admin' || Auth::user()->tipo == 'tutor' || Auth::user()->tipo == 'guarda')
         <!-- Nav Item - Pages Collapse Menu -->
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="/moradores" aria-expanded="true">
-                <i class="fas fa-fw fa-user"></i>
-                <span>Ver todos</span>
-            </a>
-        </li>
-
-        <!-- Divider -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="/moradores" aria-expanded="true">
+                    <i class="fas fa-fw fa-user"></i>
+                    <span>Ver todos</span>
+                </a>
+            </li>
+    @endif
+    <!-- Divider -->
         <hr class="sidebar-divider">
 
         <!-- Heading -->
@@ -76,29 +82,28 @@
             Ocorrências
         </div>
 
+    @if(Auth::user()->tipo == 'admin' || Auth::user()->tipo == 'tutor' || Auth::user()->tipo == 'guarda')
         <!-- Nav Item - Pages Collapse Menu -->
-        <li class="nav-item active">
-            <a class="nav-link collapsed" href="/ocorrencias" aria-expanded="true">
-                <i class="fas fa-fw fa-list"></i>
-                <span>Ver todas</span>
-            </a>
-        </li>
+            <li class="nav-item active">
+                <a class="nav-link collapsed" href="/ocorrencias" aria-expanded="true">
+                    <i class="fas fa-fw fa-list"></i>
+                    <span>Ver todas</span>
+                </a>
+            </li>
+    @endif
 
+    @if(Auth::user()->tipo == 'admin' || Auth::user()->tipo == 'guarda')
         <!-- Nav Item - Pages Collapse Menu -->
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="/monitora" aria-expanded="true">
-                <i class="fas fa-fw fa-eye"></i>
-                <span>Monitorar</span>
-            </a>
-        </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="/monitora" aria-expanded="true">
+                    <i class="fas fa-fw fa-eye"></i>
+                    <span>Monitorar</span>
+                </a>
+            </li>
+    @endif
 
-        <!-- Divider -->
+    <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">
-
-        <!-- Sidebar Toggler (Sidebar) -->
-        <div class="text-center d-none d-md-inline">
-            <button class="rounded-circle border-0" id="sidebarToggle"></button>
-        </div>
 
     </ul>
     <!-- End of Sidebar -->

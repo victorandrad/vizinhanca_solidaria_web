@@ -46,11 +46,6 @@ return [
             'provider' => 'tutors',
         ],
 
-        'guarda' => [
-            'driver' => 'session',
-            'provider' => 'guardas',
-        ],
-
         'api' => [
             'driver' => 'token',
             'provider' => 'users',
@@ -83,13 +78,8 @@ return [
 
         'tutors' => [
             'driver' => 'eloquent',
-            'model' => \App\Entities\Tutor::class
+            'model' => \App\Entities\Usuario::class
         ],
-
-        'guardas' => [
-            'driver' => 'eloquent',
-            'model' => \App\Entities\Guarda::class
-        ]
 
         // 'users' => [
         //     'driver' => 'database',

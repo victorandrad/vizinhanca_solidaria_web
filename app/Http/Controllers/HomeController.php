@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Entities\Tutor;
+use App\Entities\Usuario;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Support\Facades\Auth;
 
@@ -11,16 +11,16 @@ class HomeController extends Controller
 
     use FirebaseConnection;
     /**
-     * @var Tutor
+     * @var Usuario
      */
     private $tutor;
 
     /**
      * Create a new controller instance.
      *
-     * @param Tutor $tutor
+     * @param Usuario $tutor
      */
-    public function __construct(Tutor $tutor)
+    public function __construct(Usuario $tutor)
     {
         $this->middleware('auth');
         $this->tutor = $tutor;

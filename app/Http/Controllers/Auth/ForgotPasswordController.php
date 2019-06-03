@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Entities\Tutor;
+use App\Entities\Usuario;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
 use Illuminate\Http\Request;
@@ -22,15 +22,15 @@ class ForgotPasswordController extends Controller
 
     use SendsPasswordResetEmails;
     /**
-     * @var Tutor
+     * @var Usuario
      */
     private $tutor;
 
     /**
      * Create a new controller instance.
-     * @param Tutor $tutor
+     * @param Usuario $tutor
      */
-    public function __construct(Tutor $tutor)
+    public function __construct(Usuario $tutor)
     {
         $this->middleware('guest');
         $this->tutor = $tutor;
