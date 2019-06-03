@@ -26,6 +26,9 @@ Route::post('/moradores', 'MoradoresController@deleteUser');
 Route::get('/ocorrencias', 'OcorrenciasController@index');
 Route::post('/detalhe-ocorrencia', 'OcorrenciasController@detalhes');
 
+Route::get('/monitora', 'MonitoraController@index');
+Route::post('/detalhe-monitora', 'MonitoraController@detalhes');
+
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');

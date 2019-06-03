@@ -61,7 +61,7 @@
         </li>
 
         <!-- Nav Item - Pages Collapse Menu -->
-        <li class="nav-item active">
+        <li class="nav-item">
             <a class="nav-link collapsed" href="/moradores" aria-expanded="true">
                 <i class="fas fa-fw fa-user"></i>
                 <span>Ver todos</span>
@@ -85,7 +85,7 @@
         </li>
 
         <!-- Nav Item - Pages Collapse Menu -->
-        <li class="nav-item">
+        <li class="nav-item active">
             <a class="nav-link collapsed" href="/monitora" aria-expanded="true">
                 <i class="fas fa-fw fa-eye"></i>
                 <span>Monitorar</span>
@@ -164,41 +164,22 @@
                         <!-- Illustrations -->
                         <div class="card shadow mb-4">
                             <div class="card-header py-3">
-                                <h6 class="m-0 font-weight-bold text-primary">Todos os moradores</h6>
+                                <h6 class="m-0 font-weight-bold text-primary">Detalhes da ocorrência</h6>
                             </div>
                             <div class="card-body">
-                                <input type="search" class="form-control form-control-user" id="pesquisa" name="pesquisa" placeholder="Pesquisar">
+                                <b>De:</b> {{$remetente}}
                                 <br/>
-                                <div class="table-responsive">
-                                    <table class="table table-bordered" id="dataTableMoradores" width="100%"
-                                           cellspacing="0">
-                                        <thead>
-                                        <tr>
-                                            <th>Nome</th>
-                                            <th>Telefone</th>
-                                            <th>Endereço</th>
-                                            <th>Ações</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody id="users_list">
-                                        @for($i = 0; $i < $contador; $i++)
-                                            <tr>
-                                                <td>{{$moradores->getChild($moradores->getChildKeys()[$i])->getValue()['nome']}}</td>
-                                                <td>{{$moradores->getChild($moradores->getChildKeys()[$i])->getValue()['celular']}}</td>
-                                                <td>{{$moradores->getChild($moradores->getChildKeys()[$i])->getValue()['endereco'] .', ' . $moradores->getChild($moradores->getChildKeys()[$i])->getValue()['numero'].' - '. $moradores->getChild($moradores->getChildKeys()[$i])->getValue()['bairro']}}</td>
-                                                <td>
-                                                    <button type="button" class="btn btn-danger btn-circle btn-sm"
-                                                            data-toggle="modal"
-                                                            data-keyuser="{{$moradores->getChildKeys()[$i]}}"
-                                                            data-target="#modalDeleta">
-                                                        <i class="fas fa-trash"></i>
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                        @endfor
-                                        </tbody>
-                                    </table>
-                                </div>
+                                <br/>
+                                <b>Data e hora:</b> {{$data_hora}}
+                                <br/>
+                                <br/>
+                                <b>Mensagem:</b> {{$mensagem}}
+                                <br/>
+                                <br/>
+                                <b>Atendimento:</b> {{!$atendimento ? 'Não' : 'Sim'}}
+                                <br/>
+                                <br/>
+                                <a href="/monitora">&larr; Voltar</a>
                             </div>
                         </div>
 
@@ -252,31 +233,6 @@
     </div>
 </div>
 
-<div class="modal fade" id="modalDeleta" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Atenção</h5>
-                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                </button>
-            </div>
-            <form method="POST" action="{{action('MoradoresController@deleteUser')}}">
-                @csrf
-                <div class="modal-body">
-                    <input name="key-user" type="hidden" class="form-control" id="key-user">
-                    Tem certeza que deseja excluir esse morador?
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-danger" type="button" data-dismiss="modal">Não</button>
-                    <button class="btn btn-success" type="submit">Sim</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-
 <!-- Bootstrap core JavaScript-->
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -290,19 +246,6 @@
 <!-- Page level plugins -->
 <script src="vendor/datatables/jquery.dataTables.min.js"></script>
 <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
-
-<!-- Page level custom scripts -->
-<script src="js/datatable-moradores.js"></script>
-
-<script type="text/javascript">
-    $('#modalDeleta').on('show.bs.modal', function (event) {
-        var button = $(event.relatedTarget);
-        var id = button.data('keyuser');
-
-        var modal = $(this);
-        modal.find('#key-user').val(id);
-    });
-</script>
 
 </body>
 

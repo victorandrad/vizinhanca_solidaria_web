@@ -86,7 +86,7 @@
 
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
-            <a class="nav-link collapsed" href="#" aria-expanded="true">
+            <a class="nav-link collapsed" href="/monitora" aria-expanded="true">
                 <i class="fas fa-fw fa-eye"></i>
                 <span>Monitorar</span>
             </a>

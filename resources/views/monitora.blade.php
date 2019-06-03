@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>Vizinhança Solidária - Dashboard</title>
 
@@ -77,7 +78,7 @@
         </div>
 
         <!-- Nav Item - Pages Collapse Menu -->
-        <li class="nav-item active">
+        <li class="nav-item">
             <a class="nav-link collapsed" href="/ocorrencias" aria-expanded="true">
                 <i class="fas fa-fw fa-list"></i>
                 <span>Ver todas</span>
@@ -85,8 +86,8 @@
         </li>
 
         <!-- Nav Item - Pages Collapse Menu -->
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="#" aria-expanded="true">
+        <li class="nav-item active">
+            <a class="nav-link collapsed" href="/monitora" aria-expanded="true">
                 <i class="fas fa-fw fa-eye"></i>
                 <span>Monitorar</span>
             </a>
@@ -94,11 +95,6 @@
 
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">
-
-        <!-- Sidebar Toggler (Sidebar) -->
-        <div class="text-center d-none d-md-inline">
-            <button class="rounded-circle border-0" id="sidebarToggle"></button>
-        </div>
 
     </ul>
     <!-- End of Sidebar -->
@@ -164,22 +160,23 @@
                         <!-- Illustrations -->
                         <div class="card shadow mb-4">
                             <div class="card-header py-3">
-                                <h6 class="m-0 font-weight-bold text-primary">Detalhes da ocorrência</h6>
+                                <h6 class="m-0 font-weight-bold text-primary">Monitorar ocorrências</h6>
                             </div>
                             <div class="card-body">
-                                <b>De:</b> {{$remetente}}
-                                <br/>
-                                <br/>
-                                <b>Data e hora:</b> {{$data_hora}}
-                                <br/>
-                                <br/>
-                                <b>Mensagem:</b> {{$mensagem}}
-                                <br/>
-                                <br/>
-                                <b>Atendimento:</b> {{!$atendimento ? 'Não' : 'Sim'}}
-                                <br/>
-                                <br/>
-                                <a href="/ocorrencias">&larr; Voltar</a>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered" id="dataTableMonitoramento" width="100%"
+                                           cellspacing="0">
+                                        <thead>
+                                        <tr>
+                                            <th>De</th>
+                                            <th>Data e Hora</th>
+                                            <th>Ações</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody id="lista_ocorrencias">
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
 
@@ -246,6 +243,17 @@
 <!-- Page level plugins -->
 <script src="vendor/datatables/jquery.dataTables.min.js"></script>
 <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+{{--<!-- Firebase App is always required and must be first -->--}}
+<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+
+{{--<!-- Add additional services that you want to use -->--}}
+<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
+
+<!-- Page level custom scripts -->
+<script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/moment.min.js"></script>
+<script src="js/firebase-connect.js"></script>
+<script src="js/datatable-monitora.js"></script>
 
 </body>
 
