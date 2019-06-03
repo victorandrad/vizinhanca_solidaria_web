@@ -280,11 +280,38 @@
 <script src="vendor/datatables/jquery.dataTables.min.js"></script>
 <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+
 {{--<!-- Page level custom scripts -->--}}
 {{--<script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/moment.min.js"></script>--}}
 {{--<script src="js/firebase-connect.js"></script>--}}
 <script src="js/datatable-notificacao.js"></script>
 <script src="js/datatable-usuarios.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#celular').mask('(99) 99999-9999');
+        $('#cep').mask('99999-999');
+
+        $('#cep').blur(function () {
+            $.getJSON("https://viacep.com.br/ws/" + $('#cep').val() + "/json/?callback=?", function (dados) {
+
+                    if (!("erro" in dados)) {
+                        //Atualiza os campos com os valores da consulta.
+                        $("#endereco").val(dados.logradouro);
+                        $("#bairro").val(dados.bairro);
+                        $("#cidade").val(dados.localidade);
+                        $("#uf").val(dados.uf);
+
+                        $('#numero').focus();
+                    }
+                }
+            );
+        });
+
+    });
+</script>
 
 </body>
 
