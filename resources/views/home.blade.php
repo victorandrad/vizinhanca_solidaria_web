@@ -102,7 +102,7 @@
 
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
-            <a class="nav-link collapsed" href="#" aria-expanded="true">
+            <a class="nav-link collapsed" href="/ocorrencias" aria-expanded="true">
                 <i class="fas fa-fw fa-list"></i>
                 <span>Ver todas</span>
             </a>

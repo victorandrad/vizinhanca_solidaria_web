@@ -164,46 +164,22 @@
                         <!-- Illustrations -->
                         <div class="card shadow mb-4">
                             <div class="card-header py-3">
-                                <h6 class="m-0 font-weight-bold text-primary">Todas as ocorrências</h6>
+                                <h6 class="m-0 font-weight-bold text-primary">Detalhes da ocorrência</h6>
                             </div>
                             <div class="card-body">
-                                <input type="search" class="form-control form-control-user" id="pesquisa"
-                                       name="pesquisa" placeholder="Pesquisar">
+                                <b>De:</b> {{$remetente}}
                                 <br/>
-                                <div class="table-responsive">
-                                    <table class="table table-bordered" id="dataTableOcorrencias" width="100%"
-                                           cellspacing="0">
-                                        <thead>
-                                        <tr>
-                                            <th>De</th>
-                                            <th>Data e Hora</th>
-                                            <th>Resolvido</th>
-                                            <th>Ações</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody id="users_list">
-                                        @for($i = 0; $i < $contador; $i++)
-                                            <tr>
-                                                <td>{{$ocorrencias->getChild($ocorrencias->getChildKeys()[$i])->getValue()['remetente']}}</td>
-                                                <td>{{$ocorrencias->getChild($ocorrencias->getChildKeys()[$i])->getValue()['data_hora']}}</td>
-                                                <td>{{!$ocorrencias->getChild($ocorrencias->getChildKeys()[$i])->getValue()['atendimento'] ? 'Não' : 'Sim'}}</td>
-                                                <td>
-                                                    <form method="POST"
-                                                          action="{{action('OcorrenciasController@detalhes')}}">
-                                                        @csrf
-                                                        <input type="hidden" class="form-control"
-                                                               value="{{$ocorrencias->getChildKeys()[$i]}}"
-                                                               id="key-ocorrencia" name="key-ocorrencia">
-                                                        <button type="submit" class="btn btn-primary btn-circle btn-sm">
-                                                            <i class="fas fa-eye"></i>
-                                                        </button>
-                                                    </form>
-                                                </td>
-                                            </tr>
-                                        @endfor
-                                        </tbody>
-                                    </table>
-                                </div>
+                                <br/>
+                                <b>Data e hora:</b> {{$data_hora}}
+                                <br/>
+                                <br/>
+                                <b>Mensagem:</b> {{$mensagem}}
+                                <br/>
+                                <br/>
+                                <b>Atendimento:</b> {{!$atendimento ? 'Não' : 'Sim'}}
+                                <br/>
+                                <br/>
+                                <a href="/ocorrencias">&larr; Voltar</a>
                             </div>
                         </div>
 
@@ -270,9 +246,6 @@
 <!-- Page level plugins -->
 <script src="vendor/datatables/jquery.dataTables.min.js"></script>
 <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
-
-<!-- Page level custom scripts -->
-<script src="js/datatable-ocorrencias.js"></script>
 
 </body>
 
